@@ -1,7 +1,5 @@
-// ignore_for_file: use_build_context_synchronously
-
 import 'package:flutter/material.dart';
-import 'package:yt_coba_plugin/routes/paths.dart';
+import 'package:yt_coba_plugin/main.dart';
 
 class InitialPage extends StatefulWidget {
   const InitialPage({super.key});
@@ -19,7 +17,13 @@ class _InitialPageState extends State<InitialPage> {
 
   void redirect() async {
     await Future.delayed(Durations.extralong4);
-    Navigator.pushNamedAndRemoveUntil(context, Paths.home, (route) => false);
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(
+        builder: (builder) => const MyHomePage(title: 'YT Coba Plugin EP1'),
+      ),
+      (route) => false,
+    );
   }
 
   @override
