@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:yt_coba_plugin/app/index.dart';
+import 'package:yt_coba_plugin/core/constants/keys.dart';
+import 'package:yt_coba_plugin/core/services/get_storage.dart';
 
-void main() {
+void main() async {
+  await GSServices.init();
   runApp(const MyApp());
 }
 
@@ -10,12 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Coba Plugin',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const InitialPage(),
     );
   }
 }
@@ -32,10 +36,24 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
-  void _incrementCounter() {
+  @override
+  void initState() {
+    final current = GSServices.int(Keys.counter);
+    setState(() => _counter = current ?? 0);
+    super.initState();
+  }
+
+  void _incrementCounter() async {
     setState(() {
       _counter++;
     });
+    await GSServices.setInt(Keys.counter, _counter);
+  }
+
+  void remove() async {
+    await GSServices.remove(Keys.counter);
+    final current = GSServices.int(Keys.counter);
+    setState(() => _counter = current ?? 0);
   }
 
   @override
@@ -50,12 +68,17 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
+              'After use Get Storage with Basic Implementation',
+            ),
+            const SizedBox(height: 8),
+            const Text(
               'You have pushed the button this many times:',
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            ElevatedButton(onPressed: remove, child: const Text('Remove'))
           ],
         ),
       ),
