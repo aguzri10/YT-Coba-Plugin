@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:yt_coba_plugin/app/index.dart';
 import 'package:yt_coba_plugin/core/constants/keys.dart';
@@ -56,6 +58,19 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() => _counter = current ?? 0);
   }
 
+  void read() {
+    final username = GSServices.string(Keys.username);
+    final hasLogin = GSServices.boolean(Keys.hasLogin);
+
+    log('$username');
+    log('$hasLogin');
+  }
+
+  void write() async {
+    await GSServices.setString(Keys.username, 'iamagusriy');
+    await GSServices.setBool(Keys.hasLogin, true);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'After use Get Storage with Basic Implementation',
+              'After use Get Storage with Effective Implementation',
             ),
             const SizedBox(height: 8),
             const Text(
