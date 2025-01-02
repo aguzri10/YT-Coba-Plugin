@@ -23,7 +23,7 @@ class NewsLoad extends StatelessWidget {
                 BoxWidget(
                   height: 100,
                   width: 100,
-                  color: Colors.blue.withOpacity(0.3),
+                  color: Colors.blue.withValues(alpha: 0.3),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 const SizedBox(width: 12),
@@ -34,14 +34,14 @@ class NewsLoad extends StatelessWidget {
                       BoxWidget(
                         height: 16,
                         width: double.infinity,
-                        color: Colors.blue.withOpacity(0.3),
+                        color: Colors.blue.withValues(alpha: 0.3),
                         borderRadius: BorderRadius.circular(4),
                       ),
                       const SizedBox(height: 4),
                       BoxWidget(
                         height: 56,
                         width: double.infinity,
-                        color: Colors.blue.withOpacity(0.3),
+                        color: Colors.blue.withValues(alpha: 0.3),
                         borderRadius: BorderRadius.circular(4),
                       ),
                       const SizedBox(height: 4),
@@ -51,7 +51,7 @@ class NewsLoad extends StatelessWidget {
                           BoxWidget(
                             height: 14,
                             width: 120,
-                            color: Colors.blue.withOpacity(0.3),
+                            color: Colors.blue.withValues(alpha: 0.3),
                             borderRadius: BorderRadius.circular(4),
                           ),
                         ],
