@@ -23,8 +23,8 @@ class Shimmers {
       visible: loading,
       replacement: child ?? const SizedBox(),
       child: shimmer(
-        baseColor: Colors.blue.withOpacity(0.3),
-        highlightColor: Colors.blue.withOpacity(0.6),
+        baseColor: Colors.blue.withValues(alpha: 0.3),
+        highlightColor: Colors.blue.withValues(alpha: 0.6),
         child: onLoading,
       ),
     );
