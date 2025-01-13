@@ -7,6 +7,7 @@ class NewsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -40,8 +41,11 @@ class NewsWidget extends StatelessWidget {
                   news.title ?? '-',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    fontSize: 16,
+                  // style: const TextStyle(
+                  //   fontSize: 16,
+                  //   fontWeight: FontWeight.w700,
+                  // ),
+                  style: textTheme.bodyLarge?.copyWith(
                     fontWeight: FontWeight.w700,
                   ),
                 ),
@@ -50,22 +54,26 @@ class NewsWidget extends StatelessWidget {
                   news.desc ?? '-',
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                  ),
+                  // style: const TextStyle(
+                  //   fontSize: 12,
+                  //   fontWeight: FontWeight.w400,
+                  // ),
+                  style: textTheme.bodySmall,
                 ),
                 const SizedBox(height: 8),
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
                       'Read More',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w400,
+                      // style: TextStyle(
+                      //   fontSize: 12,
+                      //   fontWeight: FontWeight.w400,
+                      //   color: Colors.blue,
+                      // ),
+                      style: textTheme.bodySmall?.copyWith(
                         color: Colors.blue,
                       ),
                     ),
