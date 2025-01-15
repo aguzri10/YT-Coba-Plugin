@@ -8,14 +8,20 @@ class LocalData {
       PluginModel(
         id: 1,
         name: 'get_storage',
-        desc: 'Plugin for simple local storage',
+        desc: 'A plugin for storing data locally in a simple way.',
         path: Paths.getStorage,
       ),
       PluginModel(
         id: 2,
         name: 'shimmer',
-        desc: 'Plugin for loading animation/placeholder',
+        desc: 'A plugin for creating loading animations (skeleton load).',
         path: Paths.shimmer,
+      ),
+      PluginModel(
+        id: 3,
+        name: 'gap',
+        desc: 'A plugin for creating simple spacing between widgets.',
+        path: Paths.gap,
       ),
     ];
   }
@@ -55,4 +61,7 @@ class LocalData {
       ),
     ];
   }
+
+  static String get flutterImage =>
+      'https://assets.bacancytechnology.com/qanda/wp-content/uploads/2024/07/05054447/Convert-a-Double-to-an-Int-in-Dart.jpg';
 }
