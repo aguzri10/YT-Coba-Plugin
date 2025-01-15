@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:yt_coba_plugin/app/index.dart';
+import 'package:yt_coba_plugin/app/modules/gap/index.dart';
 import 'package:yt_coba_plugin/app/modules/get_storage/index.dart';
 import 'package:yt_coba_plugin/app/modules/home/index.dart';
 import 'package:yt_coba_plugin/app/modules/shimmer/index.dart';
@@ -26,6 +27,10 @@ class Routes {
       case Paths.shimmer:
         return MaterialPageRoute(
           builder: (context) => const ShimmerPage(),
+        );
+      case Paths.gap:
+        return MaterialPageRoute(
+          builder: (context) => const GapPage(),
         );
       default:
         return null;
