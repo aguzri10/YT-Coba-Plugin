@@ -23,6 +23,12 @@ class LocalData {
         desc: 'A plugin for creating simple spacing between widgets.',
         path: Paths.gap,
       ),
+      PluginModel(
+        id: 4,
+        name: 'cache_network_image',
+        desc: 'A plugin for show images from the internet and keep them in the cache directory.',
+        path: Paths.cacheNetworkImage,
+      ),
     ];
   }
 
@@ -34,7 +40,7 @@ class LocalData {
         desc:
             "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took",
         cover:
-            'https://img.freepik.com/free-vector/world-economic-newspaper-composition_1284-19685.jpg?semt=ais_hybrid',
+            'https://img.freepik.com/free-vector/world-economic-newspaper-composition_1284-19685.jpg',
         category: 'Name of Category',
         author: AuthorModel(name: 'iamagusriy', photo: ''),
       ),

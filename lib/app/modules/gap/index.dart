@@ -20,44 +20,42 @@ class GapPage extends StatelessWidget {
                 horizontal: 16,
                 vertical: 0,
               ),
-              child: Flexible(
-                child: Row(
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(26),
-                      child: Image.network(
-                        LocalData.flutterImage,
-                        width: 52,
-                        height: 52,
-                        fit: BoxFit.cover,
+              child: Row(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(26),
+                    child: Image.network(
+                      LocalData.flutterImage,
+                      width: 52,
+                      height: 52,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  // SizedBox(width: 12),
+                  Gap(12),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('iamagusriy', style: textTheme.bodyLarge),
+                      // SizedBox(height: 4),
+                      Gap(4),
+                      Text(
+                        'iamagusriy@gmail.com',
+                        style: textTheme.bodySmall?.copyWith(
+                          color: Colors.grey,
+                        ),
                       ),
-                    ),
-                    // SizedBox(width: 12),
-                    Gap(12),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('iamagusriy', style: textTheme.bodyLarge),
-                        // SizedBox(height: 4),
-                        Gap(4),
-                        Text(
-                          'iamagusriy@gmail.com',
-                          style: textTheme.bodySmall?.copyWith(
-                            color: Colors.grey,
-                          ),
+                      // SizedBox(height: 2),
+                      Gap(2),
+                      Text(
+                        'https://iamagusriy.id/',
+                        style: textTheme.bodySmall?.copyWith(
+                          color: Colors.grey,
                         ),
-                        // SizedBox(height: 2),
-                        Gap(2),
-                        Text(
-                          'https://iamagusriy.id/',
-                          style: textTheme.bodySmall?.copyWith(
-                            color: Colors.grey,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ),
@@ -69,46 +67,44 @@ class GapPage extends StatelessWidget {
                 horizontal: 16,
                 vertical: 0,
               ),
-              child: Flexible(
-                child: Row(
-                  spacing: 12,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(26),
-                      child: Image.network(
-                        LocalData.flutterImage,
-                        width: 52,
-                        height: 52,
-                        fit: BoxFit.cover,
+              child: Row(
+                spacing: 12,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(26),
+                    child: Image.network(
+                      LocalData.flutterImage,
+                      width: 52,
+                      height: 52,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  // SizedBox(width: 12),
+                  // Gap(12),
+                  Column(
+                    spacing: 4,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('iamagusriy', style: textTheme.bodyLarge),
+                      // SizedBox(height: 4),
+                      // Gap(4),
+                      Text(
+                        'iamagusriy@gmail.com',
+                        style: textTheme.bodySmall?.copyWith(
+                          color: Colors.grey,
+                        ),
                       ),
-                    ),
-                    // SizedBox(width: 12),
-                    // Gap(12),
-                    Column(
-                      spacing: 4,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('iamagusriy', style: textTheme.bodyLarge),
-                        // SizedBox(height: 4),
-                        // Gap(4),
-                        Text(
-                          'iamagusriy@gmail.com',
-                          style: textTheme.bodySmall?.copyWith(
-                            color: Colors.grey,
-                          ),
+                      // SizedBox(height: 2),
+                      // Gap(2),
+                      Text(
+                        'https://iamagusriy.id/',
+                        style: textTheme.bodySmall?.copyWith(
+                          color: Colors.grey,
                         ),
-                        // SizedBox(height: 2),
-                        // Gap(2),
-                        Text(
-                          'https://iamagusriy.id/',
-                          style: textTheme.bodySmall?.copyWith(
-                            color: Colors.grey,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ),
