@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:yt_coba_plugin/app/index.dart';
+import 'package:yt_coba_plugin/app/modules/cache_network_image/index.dart';
 import 'package:yt_coba_plugin/app/modules/gap/index.dart';
 import 'package:yt_coba_plugin/app/modules/get_storage/index.dart';
 import 'package:yt_coba_plugin/app/modules/home/index.dart';
@@ -31,6 +32,10 @@ class Routes {
       case Paths.gap:
         return MaterialPageRoute(
           builder: (context) => const GapPage(),
+        );
+      case Paths.cacheNetworkImage:
+        return MaterialPageRoute(
+          builder: (context) => const CacheImagePage(),
         );
       default:
         return null;

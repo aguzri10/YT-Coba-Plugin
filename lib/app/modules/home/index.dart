@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
         //   child: Image.asset(MyImages.logo),
         // ),
         leading: Container(
-          padding: EdgeInsets.all(8.0),
+          margin: EdgeInsets.all(8.0),
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage(MyImages.logo),
@@ -53,7 +53,10 @@ class _HomePageState extends State<HomePage> {
             return ListTile(
               onTap: () => onTap(plugin),
               title: Text(plugin.name ?? '-'),
-              subtitle: Text(plugin.desc ?? '-'),
+              subtitle: Text(
+                plugin.desc ?? '-',
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
             );
           },
         ),

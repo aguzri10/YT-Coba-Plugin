@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yt_coba_plugin/app/models/news.dart';
+import 'package:yt_coba_plugin/app/widgets/image_network.dart';
 
 class NewsWidget extends StatelessWidget {
   final NewsModel news;
@@ -23,14 +24,10 @@ class NewsWidget extends StatelessWidget {
       ),
       child: Row(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(8),
-            child: Image.network(
-              news.cover ?? '',
-              height: 100,
-              width: 100,
-              fit: BoxFit.cover,
-            ),
+          ImageNetworkWidget(
+            imageUrl: news.cover ?? '',
+            height: 100,
+            width: 100,
           ),
           const SizedBox(width: 12),
           Flexible(
@@ -61,7 +58,7 @@ class NewsWidget extends StatelessWidget {
                   style: textTheme.bodySmall,
                 ),
                 const SizedBox(height: 8),
-                 Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
